@@ -16,7 +16,6 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const FAQItem = ({ question, children }: { question: string, children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,15 +42,12 @@ const FAQItem = ({ question, children }: { question: string, children: React.Rea
 
 
 export default function Home() {
-    const headerImage = PlaceHolderImages.find(p => p.id === 'header-transformacion-digital');
-    const mafaLogo = PlaceHolderImages.find(p => p.id === 'mafa-logo');
-
   return (
     <div className="min-h-screen bg-white">
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 hover:opacity-80 transition">
-             {mafaLogo && <Image src={mafaLogo.imageUrl} data-ai-hint={mafaLogo.imageHint} alt={mafaLogo.description} width={128} height={48} className="h-12 w-auto" />}
+             <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={180} height={51} />
           </a>
           <div className="hidden md:flex gap-2 items-center">
             <a href="#features" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Caracteristicas</a>
@@ -86,7 +82,7 @@ export default function Home() {
               </a>
             </div>
             <div className="hidden md:block">
-              {headerImage && <Image src={headerImage.imageUrl} data-ai-hint={headerImage.imageHint} alt={headerImage.description} width={600} height={400} className="w-full rounded-lg shadow-2xl" loading="lazy" />}
+              <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={600} height={400} className="w-full rounded-lg shadow-2xl" loading="lazy" />
             </div>
           </div>
         </div>
@@ -95,7 +91,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-8">
-             {mafaLogo && <Image src={mafaLogo.imageUrl} data-ai-hint={mafaLogo.imageHint} alt={mafaLogo.description} width={160} height={80} className="h-20 w-auto" />}
+             <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={240} height={68} />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Por qué emprendedores y PYMES eligen <span className="text-blue-600">MAFA</span></h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -350,7 +346,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              {mafaLogo && <Image src={mafaLogo.imageUrl} data-ai-hint={mafaLogo.imageHint} alt={mafaLogo.description} width={128} height={40} className="h-10 w-auto mb-4" />}
+              <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={180} height={51} className="mb-4" />
               <p className="text-gray-400">Transformando negocios digitalmente.</p>
             </div>
             <div>
