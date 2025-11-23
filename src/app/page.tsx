@@ -82,7 +82,7 @@ export default function Home() {
               </a>
             </div>
             <div className="hidden md:block">
-              <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={600} height={400} className="w-full rounded-lg shadow-2xl" loading="lazy" />
+              <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={500} height={333} className="w-full max-w-lg mx-auto rounded-lg shadow-2xl" loading="lazy" />
             </div>
           </div>
         </div>
