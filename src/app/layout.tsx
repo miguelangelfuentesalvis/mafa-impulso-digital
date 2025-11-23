@@ -17,7 +17,7 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'MAFA Impulso Digital Landing Page',
+  title: 'MAFA Impulso Digital',
   description: 'Impulsa tu Negocio con una Landing Page Profesional en Días, No Semanas. Tu plataforma de ventas lista para atraer clientes y vender 24/7.',
   icons: {
     icon: '/icon.png',
