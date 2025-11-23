@@ -1,0 +1,16 @@
+{
+  "placeholderImages": [
+    {
+      "id": "mafa-logo",
+      "description": "Logo de MAFA Growth Digital",
+      "imageUrl": "https://images.unsplash.com/photo-1553835973-dec43bfddbeb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsb2dvJTIwYnJhbmR8ZW58MHx8fHwxNzYzNzc4ODMwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "logo brand"
+    },
+    {
+      "id": "header-transformacion-digital",
+      "description": "Imagen conceptual de transformación digital para la sección de héroe.",
+      "imageUrl": "https://images.unsplash.com/photo-1644321939012-840bf13ea6d9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkaWdpdGFsJTIwdHJhbnNmb3JtYXRpb258ZW58MHx8fHwxNzYzNzkwMDY5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "digital transformation"
+    }
+  ]
+}
