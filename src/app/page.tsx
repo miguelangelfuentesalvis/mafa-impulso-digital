@@ -76,6 +76,7 @@ const UrgencyProgressBar = () => {
 
 
 export default function Home() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
     <div className="min-h-screen bg-white">
       <header className="sticky top-0 z-50 bg-white shadow-md">
@@ -92,7 +93,7 @@ export default function Home() {
           <div className="flex items-center gap-4">
             <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition font-bold text-sm md:text-base hidden sm:inline-block">Contactar</a>
             <div className="md:hidden">
-              <Sheet>
+              <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
                 <SheetTrigger asChild>
                   <Button variant="ghost" size="icon" className="text-gray-700 hover:bg-gray-100">
                     <Menu className="h-6 w-6" />
@@ -101,13 +102,13 @@ export default function Home() {
                 </SheetTrigger>
                 <SheetContent side="left" className="bg-white">
                   <div className="flex flex-col gap-4 p-4">
-                    <a href="#" className="flex items-center gap-2 hover:opacity-80 transition mb-4">
+                    <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 hover:opacity-80 transition mb-4">
                       <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={150} height={42} className="h-auto" />
                     </a>
-                    <a href="#features" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Caracteristicas</a>
-                    <a href="#pricing" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Precios</a>
-                    <a href="#process" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Proceso</a>
-                    <a href="#faq" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">FAQ</a>
+                    <a href="#features" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Caracteristicas</a>
+                    <a href="#pricing" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Precios</a>
+                    <a href="#process" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Proceso</a>
+                    <a href="#faq" onClick={() => setIsMobileMenuOpen(false)} className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">FAQ</a>
                     <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white mt-4 px-4 py-2 rounded-lg hover:shadow-lg transition font-bold text-sm md:text-base">Contactar</a>
                   </div>
                 </SheetContent>
