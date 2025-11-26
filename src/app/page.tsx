@@ -73,7 +73,7 @@ export default function Home() {
                     <span className="sr-only">Abrir menú</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left">
+                <SheetContent side="left" className="bg-white">
                   <div className="flex flex-col gap-4 p-4">
                     <a href="#" className="flex items-center gap-2 hover:opacity-80 transition mb-4">
                       <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={150} height={42} />
