@@ -23,6 +23,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
+  SheetDescription,
   SheetTrigger,
 } from '@/components/ui/sheet';
 import { Progress } from '@/components/ui/progress';
@@ -105,6 +106,7 @@ export default function Home() {
                 <SheetContent side="left" className="bg-white">
                   <SheetHeader>
                     <SheetTitle className="sr-only">Menú principal</SheetTitle>
+                    <SheetDescription className="sr-only">Navegación del sitio MAFA Impulso Digital.</SheetDescription>
                   </SheetHeader>
                   <div className="flex flex-col gap-4 p-4">
                     <a href="#" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center gap-2 hover:opacity-80 transition mb-4">
