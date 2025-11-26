@@ -13,9 +13,17 @@ import {
   Users,
   Rocket,
   ChartColumn,
+  Menu,
 } from 'lucide-react';
 import Image from 'next/image';
 import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from '@/components/ui/sheet';
+
 
 const FAQItem = ({ question, children }: { question: string, children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,17 +57,37 @@ export default function Home() {
           <a href="#" className="flex items-center gap-2 hover:opacity-80 transition">
              <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={180} height={51} />
           </a>
-          <div className="hidden md:flex gap-2 items-center">
+          <nav className="hidden md:flex gap-2 items-center">
             <a href="#features" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Caracteristicas</a>
             <a href="#pricing" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Precios</a>
             <a href="#process" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Proceso</a>
             <a href="#faq" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">FAQ</a>
+          </nav>
+          <div className="flex items-center gap-4">
+            <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition font-bold text-sm md:text-base hidden sm:inline-block">Contactar</a>
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="outline" size="icon">
+                    <Menu className="h-6 w-6" />
+                    <span className="sr-only">Abrir menú</span>
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="left">
+                  <div className="flex flex-col gap-4 p-4">
+                    <a href="#" className="flex items-center gap-2 hover:opacity-80 transition mb-4">
+                      <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={150} height={42} />
+                    </a>
+                    <a href="#features" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Caracteristicas</a>
+                    <a href="#pricing" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Precios</a>
+                    <a href="#process" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Proceso</a>
+                    <a href="#faq" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">FAQ</a>
+                    <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white mt-4 px-4 py-2 rounded-lg hover:shadow-lg transition font-bold text-sm md:text-base">Contactar</a>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
-          <div className="md:hidden flex gap-2">
-            <a href="#features" className="text-gray-700 hover:text-blue-600 px-2 py-1 rounded text-sm transition">Caract.</a>
-            <a href="#pricing" className="text-gray-700 hover:text-blue-600 px-2 py-1 rounded text-sm transition">Precios</a>
-          </div>
-          <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transition font-bold text-sm md:text-base">Contactar</a>
         </div>
       </header>
 
@@ -80,9 +108,12 @@ export default function Home() {
               <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105">
                 👉 Quiero mi Impulso Digital
               </a>
+              <div className="mt-8 md:hidden">
+                <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={500} height={333} className="w-full max-w-lg mx-auto rounded-lg shadow-2xl" />
+              </div>
             </div>
             <div className="hidden md:block">
-              <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={500} height={333} className="w-full max-w-lg mx-auto rounded-lg shadow-2xl" loading="lazy" />
+              <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={450} height={300} className="w-full max-w-lg mx-auto rounded-lg shadow-2xl" />
             </div>
           </div>
         </div>
