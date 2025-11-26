@@ -16,13 +16,14 @@ import {
   Menu,
 } from 'lucide-react';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from '@/components/ui/sheet';
+import { Progress } from '@/components/ui/progress';
 
 
 const FAQItem = ({ question, children }: { question: string, children: React.ReactNode }) => {
@@ -44,6 +45,31 @@ const FAQItem = ({ question, children }: { question: string, children: React.Rea
           {children}
         </div>
       )}
+    </div>
+  );
+};
+
+const UrgencyProgressBar = () => {
+  const TOTAL_SLOTS = 10;
+  const [slotsTaken, setSlotsTaken] = useState(3);
+
+  useEffect(() => {
+    // Generate a random number of taken slots between 3 and 7 to create urgency
+    const randomSlots = Math.floor(Math.random() * 5) + 3;
+    setSlotsTaken(randomSlots);
+  }, []);
+
+  const progressPercentage = (slotsTaken / TOTAL_SLOTS) * 100;
+  const slotsAvailable = TOTAL_SLOTS - slotsTaken;
+
+  return (
+    <div className="mt-6 max-w-md">
+      <div className="flex justify-between items-center mb-2 font-semibold text-sm">
+        <span className="text-purple-200">¡Cupos Limitados!</span>
+        <span className="text-white">{slotsAvailable} de {TOTAL_SLOTS} disponibles</span>
+      </div>
+      <Progress value={progressPercentage} className="w-full h-3 bg-purple-800" />
+      <p className="text-xs text-purple-200 mt-2">La disponibilidad cambia rápidamente. ¡No te quedes fuera!</p>
     </div>
   );
 };
@@ -108,8 +134,9 @@ export default function Home() {
               <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105">
                 👉 Quiero mi Impulso Digital
               </a>
+              <UrgencyProgressBar />
               <div className="mt-8 md:hidden">
-                <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={500} height={333} className="w-full max-w-lg mx-auto rounded-lg shadow-2xl" />
+                <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={500} height={333} className="w-full max-w-md mx-auto rounded-lg shadow-2xl" />
               </div>
             </div>
             <div className="hidden md:block">
@@ -344,6 +371,9 @@ export default function Home() {
           <a href="https://wa.me/56940156689?text=Hola%20MAFA%20%F0%9F%91%8B%20Me%20interesa%20conocer%20m%C3%A1s%20sobre%20Impulso%20Digital.%20%C2%BFCu%C3%A1les%20son%20los%20pr%C3%B3ximos%20pasos%3F" target="_blank" rel="noopener noreferrer" className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition transform hover:scale-105">
             👉 Quiero Impulsar mi Negocio
           </a>
+          <div className="flex justify-center">
+            <UrgencyProgressBar />
+          </div>
         </div>
       </section>
 
@@ -419,5 +449,7 @@ export default function Home() {
     </div>
   );
 }
+
+    
 
     
