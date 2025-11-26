@@ -81,7 +81,7 @@ export default function Home() {
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <a href="#" className="flex items-center gap-2 hover:opacity-80 transition">
-             <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={180} height={51} />
+             <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={180} height={51} className="h-auto" />
           </a>
           <nav className="hidden md:flex gap-2 items-center">
             <a href="#features" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Caracteristicas</a>
@@ -102,7 +102,7 @@ export default function Home() {
                 <SheetContent side="left" className="bg-white">
                   <div className="flex flex-col gap-4 p-4">
                     <a href="#" className="flex items-center gap-2 hover:opacity-80 transition mb-4">
-                      <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={150} height={42} />
+                      <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={150} height={42} className="h-auto" />
                     </a>
                     <a href="#features" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Caracteristicas</a>
                     <a href="#pricing" className="text-gray-700 hover:text-blue-600 hover:bg-blue-50 px-4 py-2 rounded-lg transition">Precios</a>
@@ -149,7 +149,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="flex justify-center mb-8">
-             <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={240} height={68} />
+             <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={240} height={68} className="h-auto" />
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Por qué emprendedores y PYMES eligen <span className="text-blue-600">MAFA</span></h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -407,7 +407,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={180} height={51} className="mb-4" />
+              <Image src="/images/logo-header.png" alt="Logo de MAFA Growth Digital" width={180} height={51} className="mb-4 h-auto" />
               <p className="text-gray-600">Transformando negocios digitalmente.</p>
             </div>
             <div>
