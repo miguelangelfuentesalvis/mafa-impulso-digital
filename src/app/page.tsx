@@ -301,7 +301,7 @@ export default function Home() {
             <div className="text-center">
               <div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
               <h3 className="text-xl font-bold mb-3">Publicamos y Acompañamos</h3>
-              <p className="text-gray-600">Te entregamos acceso completo + soporte por 1 año. Tu negocio en línea funcionando.</p>
+              <p className="text-gray-600">Te entregamos soporte por 1 año. Tu negocio en línea funcionando.</p>
             </div>
           </div>
           <p className="text-center text-gray-600 mt-12 text-lg">
