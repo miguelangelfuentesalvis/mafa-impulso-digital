@@ -136,11 +136,11 @@ export default function Home() {
               </a>
               <UrgencyProgressBar />
               <div className="mt-8 md:hidden">
-                <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={500} height={333} className="w-full max-w-md mx-auto rounded-lg shadow-2xl" />
+                <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={500} height={333} className="w-full h-auto max-w-md mx-auto rounded-lg shadow-2xl" />
               </div>
             </div>
             <div className="hidden md:block">
-              <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={450} height={300} className="w-full max-w-lg mx-auto rounded-lg shadow-2xl" />
+              <Image src="/images/ofertamafa.png" alt="Oferta especial de MAFA Impulso Digital" width={450} height={300} className="w-full h-auto max-w-lg mx-auto rounded-lg shadow-2xl" />
             </div>
           </div>
         </div>
@@ -304,7 +304,7 @@ export default function Home() {
       
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Beneficios a Largo Plazo</h2>
+          <h2 className="text-3xl md:text-4xl fontbold text-center mb-12">Beneficios a Largo Plazo</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="flex items-start gap-4">
               <div className="bg-blue-100 p-3 rounded-lg flex-shrink-0">
@@ -449,7 +449,3 @@ export default function Home() {
     </div>
   );
 }
-
-    
-
-    
