@@ -68,7 +68,7 @@ export default function Home() {
             <div className="md:hidden">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" size="icon">
+                  <Button variant="ghost" size="icon" className="text-gray-700 hover:bg-gray-100">
                     <Menu className="h-6 w-6" />
                     <span className="sr-only">Abrir menú</span>
                   </Button>
@@ -419,3 +419,5 @@ export default function Home() {
     </div>
   );
 }
+
+    
